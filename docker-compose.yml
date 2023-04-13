@@ -1,0 +1,22 @@
+version: '3'
+services:
+  movie:
+    image: mounika13792468/phonepaymovies:v1
+    ports:
+      - "8000:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: mounika13792468/phonepaytrain:v1
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: mounika13792468/phonepayrecharge:v1
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 3
